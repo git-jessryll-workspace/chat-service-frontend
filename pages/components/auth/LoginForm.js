@@ -24,7 +24,7 @@ export default function LoginForm({ handleLogin }) {
     if (password.length <= 3) {
       return setErrPassword("Minimum of 4 above.");
     }
-    handleLogin({
+    return handleLogin({
       email,
       password,
       remember,
@@ -89,7 +89,7 @@ export default function LoginForm({ handleLogin }) {
             name="remember-me"
             type="checkbox"
             className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
-            onChange={e => setRemember(!remember)}
+            onChange={(e) => setRemember(!remember)}
           />
           <label
             htmlFor="remember-me"

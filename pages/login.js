@@ -1,10 +1,11 @@
 
 import {post} from 'axios';
 import LoginForm from './components/auth/LoginForm';
+import { server } from '../config/index';
 export default function login() {
   
   const handleLogin = (form) => {
-      post(`http:localhost:8000/api/login`, form)
+      post(`${server}/api/login`, form)
       .then(res => {
         
       })
